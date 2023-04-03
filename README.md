@@ -44,7 +44,7 @@ Most of the time I was rewriting code from jQuery to Angular and Developed analy
 
 
 ### Before March 2016
-2 years I was working in a few  small land development agency as a layout (html/css) developer using less javascript.
+2 years I was working in a few small site development agencies as a layout (html/css) developer using less javascript.
 
 
 ## Skills
