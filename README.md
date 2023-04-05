@@ -16,12 +16,22 @@ I have worked as a frontend developer for almost 8 years. I worked for almost 6.
 ####  HeadHunter Group PLC, Dec 2016–Apr 2023
 _HeadHunter Group is a leading online recruitment platform in Russia with mother then 1000 employees._
 
-At HeadHunter I worked on two main services:  vacancies and employers searches. Over the past 6 years, these services have undergone design changes twice and were rewritten from the jquery/xslt stack to react/redux and then from javascript to typescript.
-I was writing new functionality, unit-tests, reviewing my colleagues’ code, interacting with designers to improve the current UI, developing a long-term plan to implement accessibility into the existing codebase including finding all possible justifications for implementing this plan from the economic and marketing to the humanistic aspects. 
+- I worked on two buisness-critical services: vacancies and employers searches
+- I was part of 2 huge rewrite efforts: the jquery/xslt stack -> react/redux and JavaScript-> Typescript.
 
-I also have some knowledge about A/B tests, because all the new functionality and layouts changes was released into production only after these tests were successfully completed. Also almost a half of the UI of A/B testing service was developed by me.
+###### my primary duties:
 
-Also I was a lecturer at the HeadHunter Developer School for 2 years in a row. Taught html/css and xml/xpath/xslt. 
+- writing new functionality
+- feature development thru A/B testing
+- unit-tests
+- reviewing my colleagues
+- interacting with designers to improve the current UI
+
+
+###### my achivements:
+- I was a lecturer at the HeadHunter Developer School for 2 years in a row.
+- a half of the UI of A/B testing service was developed by me.
+- I developed a long-term plan to implement accessibility into the existing codebase including finding all possible justifications for implementing this plan from the economic and marketing to the humanistic aspects.
 
 It was not related to my direct duties but I helped the director of the administration and maintenance department in the development of a program for the separate waste collection in the office.
 
