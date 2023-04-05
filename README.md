@@ -16,8 +16,8 @@ I have worked as a frontend developer for almost 8 years. I worked for almost 6.
 ####  HeadHunter Group PLC, Dec 2016–Apr 2023
 _HeadHunter Group is a leading online recruitment platform in Russia with mother then 1000 employees._
 
-I worked on two buisness-critical services: vacancies and employers searches
-I was part of 2 huge rewrite efforts: the jquery/xslt stack -> react/redux and JavaScript-> Typescript.
+\- I worked on two buisness-critical services: vacancies and employers searches
+\- I was part of 2 huge rewrite efforts: the jquery/xslt stack -> react/redux and JavaScript-> Typescript.
 
 ###### my primary duties:
 
