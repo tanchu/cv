@@ -1,5 +1,5 @@
 ___
-Jaroslav Basov
+Jaroslav Barov
 ___
 
 I have worked as a frontend developer for almost 8 years. I worked for almost 6.5 years in Headhunter - a leading online recruitment platform in Russia (Top 10 Tech companies of Russia). I gained considerable experience in developing complex user interfaces, including accessibility, and participated in the development of a design system. 
