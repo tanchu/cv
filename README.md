@@ -2,7 +2,8 @@ ___
 Jaroslav Barov
 ___
 
-I have worked as a frontend developer for almost 8 years. I worked for almost 6.5 years in Headhunter - a leading online recruitment platform in Russia (Top 10 Tech companies of Russia). I gained considerable experience in developing complex user interfaces, including accessibility, and participated in the development of a design system. 
+ I have worked as a frontend developer for almost 8 years. I worked for almost 6.5 years in Headhunter - a leading online recruitment platform in Russia (Top 10 Tech companies of Russia). I gained considerable experience in developing complex user interfaces, including accessibility, and participated in the development of a design system.
+ Ready for relocation.
 
 ## Contact information
 
@@ -14,7 +15,7 @@ I have worked as a frontend developer for almost 8 years. I worked for almost 6.
 
 ### Frontend Developer
 ####  HeadHunter Group PLC, Dec 2016–Apr 2023
-_HeadHunter Group is a leading online recruitment platform in Russia with mother then 1000 employees._
+_HeadHunter Group is a leading online recruitment platform (kind of LinkedIn) in Russia with mother then 1000 employees._
 
 \- I worked on two buisness-critical services: vacancies and employers searches
 
@@ -24,8 +25,8 @@ _HeadHunter Group is a leading online recruitment platform in Russia with mother
 
 - writing new functionality
 - feature development thru A/B testing
-- unit-tests
-- reviewing my colleagues
+- unit-tests (jest, enzyme; tests coverage depends on project from less then 50 to 95+ %)
+- reviewing my colleagues
 - interacting with designers to improve the current UI
 
 
