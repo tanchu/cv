@@ -1,7 +1,4 @@
----
-
 Jaroslav Barov
-
 ---
 
 I have worked as a frontend developer for almost 8 years. I worked for almost 6.5 years in Headhunter - a leading online recruitment platform in Russia (Top 10 Tech companies of Russia). I gained considerable experience in developing complex user interfaces, including accessibility, and participated in the development of a design system.
@@ -13,6 +10,8 @@ Ready for relocation.
 -   Email: [ter-gukasov@ya.ru](mailto:ter-gukasov@ya.ru)
 -   Phone: [+381 61 2283 192](call:+381612283192)
 -   Telegram: [@ya_barov](https://t.me/ya_barov)
+-   WhatsApp: [79263827061](https://wa.me/79263827061)
+-   LinkedId: [@ya-barov](https://www.linkedin.com/in/ya-barov)
 
 ### Frontend Developer
 
