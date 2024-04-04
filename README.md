@@ -17,7 +17,7 @@ Ready for relocation.
 ### Senior Frontend Developer
 #### TheSoul Publishing July 2023 - present days
 
-Working at production team I made a lot of changes at this moment:
+Working at product team I made a lot of changes at this moment:
 - made TS config more strict (add 10+ new rules); 
 - added mode than 220 ESLing rules one by one;
 - develop custom ESLint rules (imports sorting, try/catch for async functions, etc...);
