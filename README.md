@@ -20,8 +20,10 @@ Ready for relocation.
 Working at production team I made a lot of changes at this moment:
 - made TS config more strict (add 10+ new rules); 
 - added mode than 220 ESLing rules one by one;
+- develop custom ESLint rules (imports sorting, try/catch for async functions, etc...);
+- develop custom webpack plugin to add html attribute with the path:line to the source code;
 - developed and added custom CI rules like "dead code checker" and some more (12000+ lines of code was deleted)
-- rewrote tones of legacy code
+- rewrote tones of legacy code;
 - TSify thousands of "any"
 - set up Sentry
 - and I'm working on new design system (DS) to replace MUI-based legacy DS 
