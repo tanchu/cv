@@ -1,19 +1,31 @@
-Jaroslav Barov
+Jaroslav Barov /  Frontend Developer
 ---
 
-I have worked as a frontend developer for almost 8 years. I worked for almost 6.5 years in Headhunter - a leading online recruitment platform in Russia (Top 10 Tech companies of Russia). I gained considerable experience in developing complex user interfaces, including accessibility, and participated in the development of a design system.
+### Location - Belgrade 
+
+I have worked as a frontend developer for 8 years. I experienced in developing complex user interfaces, including accessibility, and participated in the development of a design system.
 
 Ready for relocation.
 
-## Contact information
+### Contact information
 
 -   Email: [ter-gukasov@ya.ru](mailto:ter-gukasov@ya.ru)
 -   Phone: [+381 61 2283 192](call:+381612283192)
--   Telegram: [@ya_barov](https://t.me/ya_barov)
 -   WhatsApp: [79263827061](https://wa.me/79263827061)
 -   LinkedId: [@ya-barov](https://www.linkedin.com/in/ya-barov)
 
-### Frontend Developer
+### Senior Frontend Developer
+#### TheSoul Publishing July 2023 - present days
+
+Working at production team I made a lot of changes at this moment:
+- made TS config more strict (add 10+ new rules); 
+- added mode than 220 ESLing rules one by one;
+- developed and added custom CI rules like "dead code checker" and some more (12000+ lines of code was deleted)
+- rewrote tones of legacy code
+- TSify thousands of "any"
+- set up Sentry
+- and I'm working on new design system (DS) to replace MUI-based legacy DS 
+
 
 #### HeadHunter Group PLC, Dec 2016–Apr 2023
 
@@ -45,7 +57,7 @@ It was not related to my direct duties but I helped the director of the administ
 
 _The largest group of publishing companies if Russia for financiers, accountants, stock traders, financial analysts, etc._
 
-I was working on a web application for accounting. It was full of forms with a huge number of validations and calculations with given formulas. That's where I first learned about Webpack and dive deep in first Angular.
+I was working on a web application for accounting. It was full of forms with a huge number of validations and calculations with given formulas.
 
 ### Frontend Developer
 
@@ -71,5 +83,5 @@ Most of the time I was rewriting code from jQuery to Angular and Developed analy
 
 ## Languages
 
--   English: B2
+-   English: Intermediate
 -   Russian: Native
