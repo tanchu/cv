@@ -9,7 +9,7 @@ Ready for relocation.
 
 ### Contact information
 
--   Email: [ter-gukasov@ya.ru](mailto:ter-gukasov@ya.ru)
+-   Email: [jaroslav.barov@gmail.com](mailto:jaroslav.barov@gmail.com)
 -   Phone: [+381 61 2283 192](call:+381612283192)
 -   WhatsApp: [79263827061](https://wa.me/79263827061)
 -   LinkedId: [@ya-barov](https://www.linkedin.com/in/ya-barov)
