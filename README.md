@@ -3,7 +3,7 @@ Jaroslav Barov /  Frontend Developer
 
 ### Location - Belgrade 
 
-I have worked as a frontend developer for 8 years. I experienced in developing complex user interfaces, including accessibility, and participated in the development of a design system.
+I have worked as a frontend developer for 9 years. I experienced in developing complex user interfaces, including accessibility, and participated in the development of a design system.
 
 Ready for relocation.
 
@@ -15,27 +15,34 @@ Ready for relocation.
 -   LinkedId: [@ya-barov](https://www.linkedin.com/in/ya-barov)
 
 ### Senior Frontend Developer
+
 #### TheSoul Publishing July 2023 - present days
 
-Working at product team I made a lot of changes at this moment:
-- made TS config more strict (add 10+ new rules); 
-- added mode than 220 ESLing rules one by one;
-- develop custom ESLint rules (imports sorting, try/catch for async functions, etc...);
-- develop custom webpack plugin to add html attribute with the path:line to the source code;
-- developed and added custom CI rules like "dead code checker" and some more (12000+ lines of code was deleted)
-- rewrote tones of legacy code;
-- TSify thousands of "any"
-- set up Sentry
-- and I'm working on new design system (DS) to replace MUI-based legacy DS 
+Working at product team I made a lot of changes up to this moment:
 
+- brought the TS config from 8 rules to almost "recommended" (except "any")
+- added and configured StyleLint;
+- added more than 220 ESLing rules one by one;
+- developed custom ESLint rules (imports sorting, try/catch for async functions, etc...);
+- develop custom Webpack plugin which adds html attribute with the path:line of module to the html source code (helps to find a line of code directly from html tab in browsers developers tool);
+- developed and added custom CI rules with custom babel plugin which seek “dead code” (12000+ lines of code was deleted after first check)
+- refactored tones of legacy code; 
+- "TSified" thousands of “any”
+- setup and manage Sentry
+- and I’m working on new design system (DS) to replace MUI-based legacy DS
+
+
+
+
+
+### Frontend Developer
 
 #### HeadHunter Group PLC, Dec 2016–Apr 2023
 
-_HeadHunter Group is a leading online recruitment platform (kind of LinkedIn) in Russia with mother then 1000 employees._
+_HeadHunter Group is a leading online recruitment platform (kind of LinkedIn) in Russia with more then 1000 employees._
 
-\- I worked on two buisness-critical services: vacancies and employers searches
-
-\- I was part of 2 huge rewrite efforts: the jquery/xslt stack -> react/redux and JavaScript-> Typescript.
+I worked on two buisness-critical services: vacancies and employers searches\
+I was part of 2 huge rewrite efforts: the jquery/xslt stack -> react/redux and JavaScript-> Typescript.
 
 ###### my primary duties:
 
