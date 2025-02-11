@@ -1,96 +1,104 @@
-Jaroslav Barov /  Frontend Developer
+# Jaroslav Barov
+Frontend Developer
+
+## Location: Belgrade
+Willing to relocate
+
 ---
 
-### Location - Belgrade 
+## Contact Information
 
-I have worked as a frontend developer for 9 years. I experienced in developing complex user interfaces, including accessibility, and participated in the development of a design system.
+- Email: [jaroslav.barov@gmail.com](mailto:jaroslav.barov@gmail.com)
+- Phone: [+381 61 2283 192](call:+381612283192)
+- WhatsApp: [79263827061](https://wa.me/79263827061)
+- LinkedIn: [ linkedin.com/in/ya-barov](https://www.linkedin.com/in/ya-barov)
 
-Ready for relocation.
+---
 
-### Contact information
+## Professional Summary
 
--   Email: [jaroslav.barov@gmail.com](mailto:jaroslav.barov@gmail.com)
--   Phone: [+381 61 2283 192](call:+381612283192)
--   WhatsApp: [79263827061](https://wa.me/79263827061)
--   LinkedId: [@ya-barov](https://www.linkedin.com/in/ya-barov)
+Accomplished Frontend Developer with 10 years of experience in developing complex user interfaces and accessibility features. Proven track record of improving code quality, enhancing performance, and collaborating with cross-functional teams to create successful design systems. Committed to delivering high-quality software solutions and ready for new challenges.
+
+---
+
+## Professional Experience
 
 ### Senior Frontend Developer
+TheSoul Publishing  
+July 2023 - Present
 
-#### TheSoul Publishing July 2023 - present days
+- Led the migration of TypeScript configurations to align with recommended guidelines.
+- Implemented and configured StyleLint for improved code quality.
+- Increased ESLint rules from minimal to over 220, enhancing code consistency.
+- Developed custom ESLint rules for import sorting and error handling in asynchronous functions.
+- Created a custom Webpack plugin to link specific lines of react (jsx) code to HTML attribute, enhancing debugging.
+- Established CI rules with a custom Babel plugin that identified and eliminated over 12,000 lines of dead code.
+- Refactored significant portions of legacy code and converted many TypeScript "any" types to specific types.
+- Managed Sentry integration for error tracking and monitoring.
+- Currently developing a new design system to replace an existing MUI-based legacy system.
 
-Working at product team I made a lot of changes up to this moment:
-
-- brought the TS config from 8 rules to almost "recommended" (except "any")
-- added and configured StyleLint;
-- added more than 220 ESLing rules one by one;
-- developed custom ESLint rules (imports sorting, try/catch for async functions, etc...);
-- develop custom Webpack plugin which adds html attribute with the path:line of module to the html source code (helps to find a line of code directly from html tab in browsers developers tool);
-- developed and added custom CI rules with custom babel plugin which seek “dead code” (12000+ lines of code was deleted after first check)
-- refactored tones of legacy code; 
-- "TSified" thousands of “any”
-- setup and manage Sentry
-- and I’m working on new design system (DS) to replace MUI-based legacy DS
-
-
-
-
+---
 
 ### Frontend Developer
+HeadHunter Group PLC  
+December 2016 – April 2023
 
-#### HeadHunter Group PLC, Dec 2016–Apr 2023
+HeadHunter Group is a leading online recruitment platform in Russia with over 1,000 employees.
 
-_HeadHunter Group is a leading online recruitment platform (kind of LinkedIn) in Russia with more then 1000 employees._
+- Contributed to the business-critical services of vacancies and employer searches.
+- Participated in major rewrites from jQuery/XSLT to React/Redux and JavaScript to TypeScript.
 
-I worked on two buisness-critical services: vacancies and employers searches\
-I was part of 2 huge rewrite efforts: the jquery/xslt stack -> react/redux and JavaScript-> Typescript.
+Primary Duties:
+- Developed new features and functionality through A/B testing.
+- Wrote unit tests using Jest and Enzyme, achieving coverage between 50% to 95% depending on the project.
+- Conducted code reviews and collaborated with designers to enhance UI design.
 
-###### my primary duties:
+Achievements:
+- Served as a lecturer at the HeadHunter Developer School for two consecutive years.
+- Developed half of the UI for the A/B testing service.
+- Created a comprehensive long-term plan to integrate accessibility features into the existing codebase, outlining economic, marketing, and humanistic justifications.
 
--   writing new functionality
--   feature development thru A/B testing
--   unit-tests (jest, enzyme; tests coverage depends on project from less then 50 to 95+ %)
--   reviewing my colleagues
--   interacting with designers to improve the current UI
-
-###### my achivements:
-
--   I was a lecturer at the HeadHunter Developer School for 2 years in a row.
--   a half of the UI of A/B testing service was developed by me.
--   I developed a long-term plan to implement accessibility into the existing codebase including finding all possible justifications for implementing this plan from the economic and marketing to the humanistic aspects.
-
-It was not related to my direct duties but I helped the director of the administration and maintenance department in the development of a program for the separate waste collection in the office.
+---
 
 ### Frontend Developer
+Action Media Group  
+April 2016 – November 2016
 
-#### Action MediaGroupp, Apr 2016– Nov 2016
+- Developed web applications for accounting, focused on complex form validation and calculations.
 
-_The largest group of publishing companies if Russia for financiers, accountants, stock traders, financial analysts, etc._
-
-I was working on a web application for accounting. It was full of forms with a huge number of validations and calculations with given formulas.
+---
 
 ### Frontend Developer
+Skytrack LLC  
+June 2015 – March 2016
 
-#### Skytrack LLC June 2015 - March 2016
+- Rewrote existing jQuery code to Angular.
+- Developed analytics charts utilizing jQuery, Angular, and D3.js.
 
-_Russian startup in the field of B2B trading_
+---
 
-Most of the time I was rewriting code from jQuery to Angular and Developed analytics charts using JQuery, Angular and D3.js
+### Earlier Experience
+Various Layout Developer Roles  
+Before March 2016
 
-### Before March 2016
+- Worked for two years in small web development agencies focusing on HTML/CSS layout with minimal JavaScript.
 
-2 years I was working in a few small site development agencies as a layout (html/css) developer using less javascript.
+---
 
 ## Skills
 
--   JavaScript (ES6+), TypeScript
--   React, Redux Toolkit
--   Jest
--   Webpack, babel
--   Node.js, Python, Tornado
--   GitHub Actions,
--   Git, Docker, Bash
+- Programming Languages: JavaScript (ES6+), TypeScript
+- Frameworks & Libraries: React, Redux Toolkit
+- Testing & Build Tools: Jest, Webpack, RSPack, Babel
+- Linting: Husky, ESLing StyleLint, Prettier
+- Backend Technologies: Node.js, Python, Tornado
+- Version Control & CI/CD: Git, GitHub Actions, Docker
+- Scripting: JS, Python, Bash
+
+---
 
 ## Languages
 
--   English: Intermediate
--   Russian: Native
+- English: Intermediate
+- Russian: Native
+
