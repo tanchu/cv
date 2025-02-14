@@ -10,14 +10,16 @@ Willing to relocate
 
 - Email: [jaroslav.barov@gmail.com](mailto:jaroslav.barov@gmail.com)
 - Phone: [+381 61 2283 192](call:+381612283192)
-- WhatsApp: [79263827061](https://wa.me/79263827061)
+- WhatsApp: [381612283192](https://wa.me/381612283192)
 - LinkedIn: [ linkedin.com/in/ya-barov](https://www.linkedin.com/in/ya-barov)
 
 ---
 
 ## Professional Summary
 
-Accomplished Frontend Developer with 10 years of experience in developing complex user interfaces and accessibility features. Proven track record of improving code quality, enhancing performance, and collaborating with cross-functional teams to create successful design systems. Committed to delivering high-quality software solutions and ready for new challenges.
+Accomplished Frontend Developer with 10 years of experience in developing complex user interfaces and accessibility features. 
+Proven track record of improving code quality, enhancing performance, and collaborating with cross-functional teams to create successful design systems. 
+Committed to delivering high-quality software solutions and ready for new challenges.
 
 ---
 
@@ -74,14 +76,6 @@ June 2015 – March 2016
 
 - Rewrote existing jQuery code to Angular.
 - Developed analytics charts utilizing jQuery, Angular, and D3.js.
-
----
-
-### Earlier Experience
-Various Layout Developer Roles  
-Before March 2016
-
-- Worked for two years in small web development agencies focusing on HTML/CSS layout with minimal JavaScript.
 
 ---
 
