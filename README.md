@@ -1,121 +1,102 @@
-# ID Agent + ID Mentor — Design System
+# Yaroslav Barov
+## Senior Frontend Engineer | Frontend Platform & Developer Experience (DX) | Design Systems | React · TypeScript
 
-A self-contained design system distilled from the two Ivan Doronin marketing sites:
-**ID Agent** (AI job-search copilot) and **ID Mentor** (1-on-1 PM mentoring).
-
-Both products share a single visual language: a **deep indigo-black stage** with a signature
-**magenta-violet accent** (`#8606c1 → #b44de8`), dense **Raleway** typography with bold
-`-0.03em` display headlines, and **Space Mono** reserved for data, metrics, and dashboard
-widgets. The system is tuned for Russian-language marketing copy and self-hosted so it can
-ship anywhere without a CDN.
+jaroslav.barov@gmail.com · +381 61 2283 192 · [LinkedIn](https://www.linkedin.com/in/yaroslavbarov) · [GitHub](https://github.com/tanchu)
+Belgrade, Serbia · Work authorization: Serbia · Remote (CET / UTC+1) · Open to full-time or contract / B2B
+Published open-source tooling: [swc-plugin-react-source](https://www.npmjs.com/package/swc-plugin-react-source) · [babel-plugin-react-source-string](https://www.npmjs.com/package/babel-plugin-react-source-string) (npm)
 
 ---
 
-## Files
+## PROFESSIONAL SUMMARY
 
-```
-colors_and_type.css       ← tokens + type utilities (single source of truth)
-fonts/                    ← Raleway + Space Mono TTFs (SIL OFL 1.1)
-preview/                  ← specimen cards for the review pane (type, color, spacing)
-ui_kits/
-  id-agent/               ← full site recreation as modular React components
-  id-mentor/              ← full site recreation as modular React components
-assets/                   ← founder photos, client avatars, logos, icons
-  logos/                    ← id-logo-primary.svg · light · mono-dark · mono-white · tight · mark (png)
-SKILL.md                  ← how to use this kit
-```
+Senior Frontend Engineer / Frontend Software Developer with 10 years building complex, high-load web user interfaces and the frontend platform tooling that keeps large codebases healthy. Deep expertise in React, TypeScript, JavaScript (ES6+), Redux Toolkit, and modern build tooling (Webpack, RSpack, Babel). Specialized in developer experience (DX), design systems, code-quality and linting infrastructure (ESLint, StyleLint), strict TypeScript migration, accessibility (a11y), performance optimization, and legacy modernization. Hands-on with custom ESLint/Babel/Webpack plugins (AST-level tooling), CI/CD, automated testing, and frontend architecture. Strong product background (A/B testing, cross-functional collaboration with design and product), plus two years mentoring frontend developers and driving org-level quality initiatives — moving toward a frontend / engineering team lead track.
 
 ---
 
-## Quick start
+## AREAS OF EXPERTISE
 
-```html
-<link rel="stylesheet" href="colors_and_type.css">
-<body class="dark">
-  <h1 class="t-display">AI <span class="t-grad-accent">управляет</span> рутиной</h1>
-  <p class="t-lead">Под каждого клиента — персональный AI-агент.</p>
-  <button class="t-btn t-btn-primary">Начать →</button>
-</body>
-```
-
-Dark mode is the default stage. Every token is defined on `:root` and overridable.
+Frontend Development · Web Development · Single-Page Applications (SPA) · React · React.js · TypeScript · JavaScript · ECMAScript (ES6+) · Redux · Redux Toolkit · HTML5 · CSS3 · SCSS / Sass · Responsive Design · Cross-Browser Compatibility · UI Development · Component Architecture · Design Systems · Reusable Component Libraries · Accessibility (a11y) · WCAG · Frontend Platform · Developer Experience (DX) · Developer Tooling · Build Tooling · Webpack · RSpack · Babel · SWC · Next.js · Module Bundling · Tree Shaking · Dead Code Elimination · Code Splitting · Performance Optimization · Code Quality · Static Code Analysis · Linting · ESLint · StyleLint · Prettier · Husky · Custom Lint Rules · AST (Abstract Syntax Tree) Tooling · Compiler Plugins · Strict Type Safety · TypeScript Migration · Refactoring · Legacy Modernization · Unit Testing · Jest · Playwright · A/B Testing · CI/CD · GitHub Actions · Git · Docker · Sentry · Error Monitoring · REST APIs · Node.js · Python · Bash · Code Review · Mentoring · Team Leadership · Agile · Scrum · Cross-Functional Collaboration · jQuery
 
 ---
 
-## Design DNA
+## PROFESSIONAL EXPERIENCE
 
-### Brand mark
-Five logo lockups ship in `assets/logos/`. The primary lockup is a **white `i` (gradient from `#FFFFFF` 40% → `#D9C8EB`)** next to a **gradient `d` (`#B44DE8 → #A78BFA`)** with a solid `#B44DE8` dot and a soft radial glow. Pick by surface:
+### TheSoul Publishing — Senior Frontend Developer
+Belgrade · Jun 2023 – Jun 2026
 
-| File | Use on |
-|---|---|
-| `id-logo-primary.svg` | Dark stage (`#0b0812` / `#1a1528`) — the default |
-| `id-logo-light.svg` | Light marketing backgrounds — `i` becomes dark, `d` stays gradient |
-| `id-logo-mono-dark.svg` | Single-color dark on light (print, invoices, 1-color press) |
-| `id-logo-mono-white.svg` | Single-color white on accent / photo / video overlays |
-| `id-logo-tight.svg` | Tighter lockup variant — dot closer to the `d` for horizontal packing |
-| `id-mark-square.png` | Raster app-icon / favicon / social-avatar mark |
+Frontend platform, developer experience (DX), and code-quality engineering on a large React / TypeScript codebase.
 
-**Clearspace:** reserve at least the width of the `i` stem around the lockup. **Minimum size:** 24px tall for the mark, 80px wide for the lockup. The dot is load-bearing — never crop or reposition it; the radial glow is decorative and may be removed if a flat render is required.
+- Built the team's linting and code-quality infrastructure: grew the ESLint ruleset from a minimal config to 220+ rules, then migrated it to maintained plugin presets (`@eslint-react/eslint-plugin`, `@stylistic/eslint-plugin`, `eslint-plugin-import-x`, `typescript-eslint`); set up StyleLint from scratch and standardized formatting with Prettier and Husky.
+- Wrote custom ESLint rules (AST-level) for import sorting and async error handling.
+- Built and published custom Webpack / RSpack / Babel plugins (open-source on npm) that tag rendered HTML with JSX source locations to speed up debugging: `babel-plugin-react-source-string` (Webpack/RSpack) and `swc-plugin-react-source` (Next.js/RSpack).
+- Added CI/CD rules backed by a custom Babel plugin that detected and removed 12,000+ lines of dead code, improving build performance and maintainability.
+- Led the TypeScript configuration migration to recommended guidelines and replaced `any` types with concrete types across the entire project, raising type safety and refactoring large parts of the legacy codebase.
+- Worked on a new design system (reusable component library) to replace the legacy MUI-based one.
+- Set up and maintained Sentry for error tracking and monitoring.
 
-The **Brand Swatches** card (`preview/brand-swatches.html`) is a drop-in palette reference for Keynote / Figma / Canva: open it, eyedropper each swatch, save to your app's custom palette. It encodes the nine canonical brand colors plus the signature 135° gradient.
+### HeadHunter Group — Senior Frontend Developer
+Dec 2016 – Apr 2023 · HeadHunter: leading online recruitment platform in Russia, 1,000+ employees
 
-### Palette
-- **Stage:** `--bg` `#0b0812` (near-black indigo) with `--bg-2` `#141020` for alt sections.
-- **Cards:** `--bg-card` `#1a1528` → hover `#221d32`.
-- **Accent:** `--accent` `#8606c1` / `--accent-light` `#b44de8` / glow `rgba(134,6,193,.25)`.
-- **Signals:** green `#34d399` (success, results), amber `#fbbf24` (attention), blue `#60a5fa` (info), red `#f87171` (pain).
-- **Text:** `--fg-1` `#ffffff` / `--fg-2` `#a8a0b8` / `--fg-3` `#6b6180`.
+High-load product frontend on two business-critical services (vacancy search and employer search), through two major rewrites.
 
-Gradient accent is non-negotiable — headline keywords (`AI`, `консультант`, `вы`)
-gradient-clip onto `linear-gradient(180deg, #b44de8 0%, #a78bfa 100%)`.
+- Part of two large-scale rewrite / modernization efforts: jQuery / XSLT → React / Redux and JavaScript → TypeScript.
+- Built new functionality and shipped product features through A/B testing; developed half of the UI for the A/B testing service.
+- Wrote unit tests (Jest, Enzyme) with 50–95% coverage depending on the project.
+- Reviewed colleagues' code and collaborated cross-functionally with designers to improve UI/UX.
+- Taught frontend at the HeadHunter Developer School for two years (mentoring).
+- Drafted a long-term plan to integrate accessibility (a11y) into the existing codebase, with economic, marketing, and humanistic justifications.
 
-### Typography
-**Raleway** (self-hosted variable font, 100–900) is the single prose family. Display is
-**800 at -0.03em tracking**, body is 400–500. **Space Mono** (self-hosted, 400 / 400i /
-700 / 700i) appears *only* in dashboard widgets, KPIs, timestamps, and preview-card tag
-labels — never in prose.
+### Action Media Group — Frontend Developer
+Apr 2016 – Nov 2016
 
-### Spacing & shape
-- Radii: `--radius` `16px` (cards), `--radius-sm` `10px` (inputs, small chips), `100px` (pills).
-- Section rhythm: `--section-gap` `80px` on desktop, `56px` on mobile.
-- Max content width: `1120px`.
-- Card borders: `1px solid rgba(255,255,255,.06)`, hover lifts to `.12`.
+- Built accounting web applications focused on form validation and calculation logic.
 
-### Motion
-- `cubic-bezier(0.25, 0.46, 0.45, 0.94)` for hero fade-up (0.85s).
-- Pulse dot: 2s ease infinite on "Набор открыт" badges.
-- Card hover: `transform: translateY(-2px)` + border recolor, 250ms.
-- Gantt bars reveal via `clip-path: inset(0 100% 0 0)` → `inset(0 0% 0 0)`, staggered.
+### Skytrack LLC — Frontend Developer
+Jun 2015 – Mar 2016
+
+- Rewrote legacy jQuery code in Angular.
+- Built interactive analytics charts and data visualizations with jQuery, Angular, and D3.js.
 
 ---
 
-## Components (in `ui_kits/`)
+## TECHNICAL SKILLS
 
-**Shared** — nav with blur backdrop · hero with founder photo-card · section labels ·
-pain cards (4-up grid) · founder about card (photo + quote + company chips) · testimonials
-(avatar + quote + green result chip) · FAQ accordion · CTA card with radial glow · footer.
-
-**ID Agent specific** — process stepper (Step 1 → 2 → 3 with connector) · feature grid
-with outlined icons · dashboard mockup preview · "how it works" with animated arrows.
-
-**ID Mentor specific** — 3 track cards (Карьера / Поиск / Hard skills) each color-coded
-(blue / green / amber) · Gantt schedule · 2-plan pricing (Спринт 1mo / Интенсив 2mo with
-"Рекомендуемый" badge) · Telegram + WhatsApp CTA pair.
-
----
-
-## Flagged substitutions
-- **Fonts**: Raleway and Space Mono are **self-hosted** from `fonts/` (variable-weight TTFs, SIL Open Font License 1.1). No Google Fonts call is made. If you ship this to a new host, copy `fonts/` alongside `colors_and_type.css` — the `@font-face src:` paths are relative.
-- **Icons**: Lucide is flagged as the CDN companion for any icon not shipped in the source. Every new icon pulled from Lucide should be noted at the callsite.
-- **Imagery**: Real founder and client photos are in `assets/`. Use placeholder `.png` boxes rather than AI-generated portraits for new personas.
+**Languages:** JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS/Sass, Python, Bash
+**Frameworks & Libraries:** React, Redux Toolkit, Next.js (exposure), jQuery
+**Build & Tooling:** Webpack, RSpack, Babel, SWC, custom compiler/bundler plugins, AST tooling, tree shaking, code splitting, dead code elimination
+**Code Quality:** ESLint (custom rules), StyleLint, Prettier, Husky, static code analysis, strict TypeScript
+**Testing:** Jest, Playwright, unit testing
+**CI/CD & DevOps:** Git, GitHub Actions, Docker
+**Monitoring:** Sentry
+**Backend (working knowledge):** Node.js, Python, Tornado, REST APIs
+**Practices:** Design systems, accessibility (a11y), performance optimization, legacy modernization, A/B testing, code review, mentoring, Agile/Scrum
 
 ---
 
-## When to pick which side
+## EDUCATION
 
-| Need | Look at |
-|---|---|
-| Product/tool positioning, feature grids, dashboard previews | **ID Agent** kit |
-| Personal/consulting positioning, tracks, founder-led copy, pricing with tiers | **ID Mentor** kit |
-| Both — it's an Ivan Doronin property | use the shared tokens, mix components |
+**Bachelor's Degree, International Economics** — Moscow State University of Instrument Engineering and Computer Sciences (MGUPI), 2004–2009
+
+---
+
+## LANGUAGES
+
+- English — Upper-Intermediate (B2)
+- Russian — Native
+
+---
+
+<!--
+OPERATOR NOTES (не выводить в PDF):
+- ЕДИНАЯ версия CV с максимумом ключевиков (решение клиента 2026-06-20): объединены master_cv + keyword_optimized → один канон. Блок AREAS OF EXPERTISE/KEYWORDS + расширенные TECHNICAL SKILLS дают ATS-плотность; всё правдиво (без фабрикации, validate_cv_facts clean).
+- Имя: "Yaroslav" (НЕ "Jaroslav" — кроме email-адреса, который реально jaroslav.barov@).
+- LinkedIn URL: /in/yaroslavbarov — ПОДТВЕРЖДЁН клиентом 2026-06-20.
+- HeadHunter титул: "Senior Frontend Developer" — ПОДТВЕРЖДЁН клиентом 2026-06-20.
+- TheSoul старт: June 2023 — ПОДТВЕРЖДЁН клиентом 2026-06-20.
+- LinkedIn (Headline/About/Skills): обновлённая версия ПРИМЕНЕНА клиентом в профиле 2026-06-20.
+- Удалена строка "I did 99% of the work. AI the rest." (непрофессионально).
+- Образование добавлено из LinkedIn.
+- People-management (запрос клиента, strategy P7): summary несёт lead-мост ("moving toward a frontend / engineering team lead track") через РЕАЛЬНЫЕ менторские сигналы (HH Dev School 2 года, code review, a11y-инициатива). НЕ заявлять "Team Lead" как факт — прямых подчинённых нет.
+- P7: добавить outcome-метрики где появятся факты (размер кодовой базы, влияние на build/CI время, кол-во контрибьюторов DS) — запросить у клиента.
+- resumes/keyword_optimized.* удалён 2026-06-20 (слит в этот канон, чтобы не было дублей).
+-->
