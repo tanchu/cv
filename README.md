@@ -85,18 +85,3 @@ Jun 2015 – Mar 2016
 - Russian — Native
 
 ---
-
-<!--
-OPERATOR NOTES (не выводить в PDF):
-- ЕДИНАЯ версия CV с максимумом ключевиков (решение клиента 2026-06-20): объединены master_cv + keyword_optimized → один канон. Блок AREAS OF EXPERTISE/KEYWORDS + расширенные TECHNICAL SKILLS дают ATS-плотность; всё правдиво (без фабрикации, validate_cv_facts clean).
-- Имя: "Yaroslav" (НЕ "Jaroslav" — кроме email-адреса, который реально jaroslav.barov@).
-- LinkedIn URL: /in/yaroslavbarov — ПОДТВЕРЖДЁН клиентом 2026-06-20.
-- HeadHunter титул: "Senior Frontend Developer" — ПОДТВЕРЖДЁН клиентом 2026-06-20.
-- TheSoul старт: June 2023 — ПОДТВЕРЖДЁН клиентом 2026-06-20.
-- LinkedIn (Headline/About/Skills): обновлённая версия ПРИМЕНЕНА клиентом в профиле 2026-06-20.
-- Удалена строка "I did 99% of the work. AI the rest." (непрофессионально).
-- Образование добавлено из LinkedIn.
-- People-management (запрос клиента, strategy P7): summary несёт lead-мост ("moving toward a frontend / engineering team lead track") через РЕАЛЬНЫЕ менторские сигналы (HH Dev School 2 года, code review, a11y-инициатива). НЕ заявлять "Team Lead" как факт — прямых подчинённых нет.
-- P7: добавить outcome-метрики где появятся факты (размер кодовой базы, влияние на build/CI время, кол-во контрибьюторов DS) — запросить у клиента.
-- resumes/keyword_optimized.* удалён 2026-06-20 (слит в этот канон, чтобы не было дублей).
--->
