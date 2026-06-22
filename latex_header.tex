@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+
+% ── Fonts ──────────────────────────────────────────────────────────────────
+% On your machine with Verdana installed, replace both lines with:
+%   \setmainfont{Verdana}
+%   \setmonofont{Consolas}[Scale=0.82]
+\usepackage{fontspec}
+\setmainfont{Verdana}
+\setmonofont{Menlo}[Scale=0.82]
+\usepackage{newunicodechar}
+\newfontfamily\arrowfont{Arial}
+\newunicodechar{→}{{\arrowfont→}}
+
+% ── Page layout ────────────────────────────────────────────────────────────
+\usepackage[a4paper, top=13mm, bottom=13mm, left=13mm, right=13mm]{geometry}
+
+% ── Colors & misc ──────────────────────────────────────────────────────────
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+\definecolor{darkgray}{RGB}{50,50,50}
+\definecolor{midgray}{RGB}{90,90,90}
+
+\color{darkgray}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.5pt}
+\setstretch{1.07}
+
+% Suppress <hr> rules that pandoc emits for markdown ---
+\renewcommand{\rule}[2]{}
+
+% ── Lists ──────────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  label={\small\textbullet},
+  leftmargin=9pt,
+  itemsep=1pt,
+  topsep=2pt,
+  parsep=0pt
+}
+\providecommand{\tightlist}{\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}}
+
+% ── Headings ───────────────────────────────────────────────────────────────
+\usepackage[explicit]{titlesec}
+
+% H1 = Candidate name: 20pt bold
+\titleformat{\section}[block]
+  {\fontsize{20pt}{24pt}\selectfont\bfseries}
+  {}{0em}{#1}
+\titlespacing*{\section}{0pt}{0pt}{3pt}
+
+% H2 = Section headers: 9.5pt bold ALL CAPS + full-width rule
+\titleformat{\subsection}[block]
+  {\fontsize{9.5pt}{11pt}\selectfont\bfseries\MakeUppercase}
+  {}{0em}{#1\,\hrulefill}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+
+% H3 = Company / Role: 10pt bold
+\titleformat{\subsubsection}[block]
+  {\fontsize{10pt}{12pt}\selectfont\bfseries}
+  {}{0em}{#1}
+\titlespacing*{\subsubsection}{0pt}{8pt}{1pt}
+
+% H4 = Date / location: 9pt gray
+\titleformat{\paragraph}[block]
+  {\fontsize{9pt}{11pt}\selectfont\color{midgray}}
+  {}{0em}{#1}
+\titlespacing*{\paragraph}{0pt}{0pt}{2pt}
+
+% ═══════════════════════════════════════════════════════════════════════════
+\begin{document}
+\pagestyle{empty}
+
+\fontsize{9.5pt}{13pt}\selectfont
+
+$body$
+
+\end{document}
