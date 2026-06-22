@@ -1,0 +1,84 @@
+name: Build CV PDF
+
+# Rebuild yaroslav_barov.pdf whenever README.md (or the template) changes on master,
+# then commit the regenerated PDF back to master.
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - latex_header.tex
+      - .github/workflows/build-pdf.yml
+
+# Allow the workflow to push the regenerated PDF back to the repo.
+permissions:
+  contents: write
+
+# Avoid overlapping runs racing to push to master.
+concurrency:
+  group: build-pdf-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pandoc, XeLaTeX and fonts
+        run: |
+          set -eux
+          # Accept the MS Core Fonts EULA non-interactively (provides Verdana + Arial).
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" \
+            | sudo debconf-set-selections
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc \
+            texlive-xetex \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            fonts-dejavu-core \
+            ttf-mscorefonts-installer \
+            fontconfig
+
+      - name: Alias Menlo -> DejaVu Sans Mono
+        # The template's \setmonofont{Menlo} is a macOS-only font; map it to a
+        # monospace font available on the runner so XeLaTeX can resolve it.
+        run: |
+          set -eux
+          mkdir -p "$HOME/.config/fontconfig/conf.d"
+          cat > "$HOME/.config/fontconfig/conf.d/00-menlo-alias.conf" <<'EOF'
+          <?xml version="1.0"?>
+          <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+          <fontconfig>
+            <match target="pattern">
+              <test name="family"><string>Menlo</string></test>
+              <edit name="family" mode="assign" binding="strong">
+                <string>DejaVu Sans Mono</string>
+              </edit>
+            </match>
+          </fontconfig>
+          EOF
+          fc-cache -f
+
+      - name: Build PDF
+        run: |
+          pandoc README.md \
+            --pdf-engine=xelatex \
+            --template=latex_header.tex \
+            -o yaroslav_barov.pdf
+
+      - name: Commit regenerated PDF
+        run: |
+          set -eux
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- yaroslav_barov.pdf; then
+            echo "PDF unchanged, nothing to commit."
+            exit 0
+          fi
+          git add yaroslav_barov.pdf
+          git commit -m "chore: rebuild yaroslav_barov.pdf [skip ci]"
+          git push
