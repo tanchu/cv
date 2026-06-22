@@ -43,31 +43,18 @@ jobs:
             ttf-mscorefonts-installer \
             fontconfig
 
-      - name: Alias Menlo -> DejaVu Sans Mono
-        # The template's \setmonofont{Menlo} is a macOS-only font; map it to a
-        # monospace font available on the runner so XeLaTeX can resolve it.
-        run: |
-          set -eux
-          mkdir -p "$HOME/.config/fontconfig/conf.d"
-          cat > "$HOME/.config/fontconfig/conf.d/00-menlo-alias.conf" <<'EOF'
-          <?xml version="1.0"?>
-          <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-          <fontconfig>
-            <match target="pattern">
-              <test name="family"><string>Menlo</string></test>
-              <edit name="family" mode="assign" binding="strong">
-                <string>DejaVu Sans Mono</string>
-              </edit>
-            </match>
-          </fontconfig>
-          EOF
-          fc-cache -f
-
       - name: Build PDF
         run: |
+          set -eux
+          # The template's \setmonofont{Menlo} is a macOS-only font. fontspec
+          # refuses fontconfig substitutes and errors if the exact family is
+          # missing, so swap it for an available mono font in a build-only copy
+          # of the template (the committed latex_header.tex stays unchanged).
+          sed 's/\\setmonofont{Menlo}/\\setmonofont{DejaVu Sans Mono}/' \
+            latex_header.tex > .ci_header.tex
           pandoc README.md \
             --pdf-engine=xelatex \
-            --template=latex_header.tex \
+            --template=.ci_header.tex \
             -o yaroslav_barov.pdf
 
       - name: Commit regenerated PDF
