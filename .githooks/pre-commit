@@ -1,0 +1,23 @@
+#!/bin/sh
+# Rebuild yaroslav_barov.pdf from README.md and include it in the same commit.
+# Runs only when README.md or the LaTeX template is part of the commit.
+#
+# Enable in a fresh clone with:
+#   git config core.hooksPath .githooks
+
+# Skip unless README.md or latex_header.tex is staged.
+if ! git diff --cached --name-only | grep -qE '^(README\.md|latex_header\.tex)$'; then
+  exit 0
+fi
+
+echo "pre-commit: rebuilding yaroslav_barov.pdf..."
+if pandoc README.md \
+    --pdf-engine=xelatex \
+    --template=latex_header.tex \
+    -o yaroslav_barov.pdf; then
+  git add yaroslav_barov.pdf
+  echo "pre-commit: yaroslav_barov.pdf rebuilt and staged."
+else
+  echo "pre-commit: pandoc failed; aborting commit." >&2
+  exit 1
+fi
