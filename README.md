@@ -77,6 +77,7 @@ Jun 2015 – Mar 2016
 
 **Bachelor's Degree, International Economics** — Moscow State University of Instrument Engineering and Computer Sciences (MGUPI), 2004–2009
 
+
 ---
 
 ## LANGUAGES
