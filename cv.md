@@ -15,7 +15,7 @@ contacts:
 
 ## Professional Summary
 
-Senior engineer with 10+ years of building complex, high-load web products, now working full-stack on AI infrastructure. At Claven AI I build the platform that deploys any open-source LLM on any hardware — Kubernetes services in Go, inference engines (vLLM, SGLang), fractional GPU sharing with HAMi, and the React / TypeScript portal on top. Before that: frontend platform and developer experience (DX) at TheSoul Publishing and six years on HeadHunter's high-load recruitment product. Known for turning engineering standards into tooling — custom ESLint / Babel / SWC plugins (two published on npm), strict TypeScript, lint- and test-enforced design systems, CI/CD — and for shipping production sites end to end, from design tokens to deployment.
+Senior engineer with 10+ years of building complex, high-load web products, now working full-stack on AI infrastructure. At Claven AI I build the platform that deploys any open-source LLM on any hardware — Kubernetes services in Go, inference engines (vLLM, SGLang), fractional GPU sharing with HAMi, and the React / TypeScript portal on top. Before that: frontend platform and developer experience (DX) at TheSoul Publishing and six years on HeadHunter's high-load recruitment product. Known for turning engineering standards into tooling — custom ESLint / Babel / SWC / Vite plugins (three published on npm), strict TypeScript, lint- and test-enforced design systems, CI/CD — and for shipping production sites end to end, from design tokens to deployment.
 
 ## Core Competencies
 
@@ -32,7 +32,7 @@ Design Systems & Accessibility
 : Design tokens (OKLCH, rem type scale) · reusable component libraries · accessibility (a11y, WCAG) · responsive and cross-browser UI
 
 Developer Experience & Code Quality
-: ESLint (custom rules) · Biome · StyleLint · shareable configs · AST tooling · Babel / SWC / Webpack / RSpack plugins · strict TypeScript · dead code elimination
+: ESLint (custom rules) · Biome · StyleLint · shareable configs · AST tooling · Babel / SWC / Vite / Webpack / RSpack plugins · strict TypeScript · dead code elimination
 
 Testing & Delivery
 : Playwright (e2e, computed-style snapshots) · Jest · MSW · contract tests · GitHub Actions · release-please · Sentry
@@ -63,7 +63,7 @@ AI-Assisted Development
 
 - Built the team's linting and code-quality infrastructure: grew the ESLint ruleset from a minimal config to 220+ rules, then migrated it to maintained plugin presets (`@eslint-react/eslint-plugin`, `@stylistic/eslint-plugin`, `eslint-plugin-import-x`, `typescript-eslint`); set up StyleLint from scratch and standardized formatting with Prettier and Husky.
 - Wrote custom ESLint rules (AST-level) for import sorting and async error handling.
-- Built and published open-source plugins that tag rendered HTML with JSX source locations to speed up debugging: `babel-plugin-react-source-string` (Webpack / RSpack) and `swc-plugin-react-source` (Next.js / RSpack).
+- Built and published the Babel and SWC versions of the React source-location plugins (see Open Source).
 - Added CI/CD rules backed by a custom Babel plugin that detected and removed 12,000+ lines of dead code, improving build performance and maintainability.
 - Led the TypeScript configuration migration to recommended guidelines and replaced `any` with concrete types across the entire project.
 - Worked on a new design system (reusable component library) to replace the legacy MUI-based one; set up and maintained Sentry.
@@ -97,7 +97,15 @@ AI-Assisted Development
 - **Delivery:** GitHub Actions CI on every pull request, deploy by version tag to a VPS (pm2, nginx, Cloudflare), Dependabot updates, and every asset optimization a site needs — SVG minification, JPEG to WebP / AVIF conversion and more.
 - **Working with AI agents:** coding agents do most of the routine work under project rules (AGENTS.md); linters, tests and owner approval for new tokens keep the output consistent.
 
+## Open Source
+
+React plugins that tag every JSX element with `data-source="path:line"`, so any DOM node in DevTools points to its source line.
+
+- **vite-plugin-react-source-string** — Vite 5+ (incl. Rolldown), oxc-parser · [GitHub](https://github.com/tanchu/vite-plugin-react-source) · [npm](https://www.npmjs.com/package/vite-plugin-react-source-string)
+- **swc-plugin-react-source-string** — Next.js and Rspack, written in Rust · [GitHub](https://github.com/tanchu/swc-plugin-react-source) · [npm](https://www.npmjs.com/package/swc-plugin-react-source-string)
+- **babel-plugin-react-source-string** — Babel / Webpack · [GitHub](https://github.com/tanchu/babel-plugin-react-source-string) · [npm](https://www.npmjs.com/package/babel-plugin-react-source-string)
+
 ## Education & Languages
 
-**Bachelor's Degree, International Economics** — Moscow State University of Instrument Engineering and Computer Sciences (MGUPI), 2004–2009\
+**Bachelor's Degree, International Economics** — MGUPI, Moscow, 2004–2009\
 English — Upper-Intermediate (B2) · Russian — Native

@@ -15,7 +15,7 @@ contacts:
 
 ## Профиль
 
-Senior-разработчик с опытом 10+ лет в сложных высоконагруженных веб-продуктах, сейчас — full-stack в AI-инфраструктуре. В Claven AI разрабатываю платформу, которая разворачивает любую открытую LLM на любом железе: сервисы на Go поверх Kubernetes, движки инференса (vLLM, SGLang), деление GPU между нагрузками средствами HAMi и портал на React / TypeScript. До этого — frontend-платформа и developer experience (DX) в TheSoul Publishing и шесть лет в высоконагруженном продукте HeadHunter. Превращаю стандарты разработки в инструменты: собственные плагины ESLint / Babel / SWC (два опубликованы в npm), строгий TypeScript, дизайн-системы под контролем линтеров и тестов, CI/CD. Довожу сайты до продакшена целиком — от токенов дизайна до выкладки.
+Senior-разработчик с опытом 10+ лет в сложных высоконагруженных веб-продуктах, сейчас — full-stack в AI-инфраструктуре. В Claven AI разрабатываю платформу, которая разворачивает любую открытую LLM на любом железе: сервисы на Go поверх Kubernetes, движки инференса (vLLM, SGLang), деление GPU между нагрузками средствами HAMi и портал на React / TypeScript. До этого — frontend-платформа и developer experience (DX) в TheSoul Publishing и шесть лет в высоконагруженном продукте HeadHunter. Превращаю стандарты разработки в инструменты: собственные плагины ESLint / Babel / SWC / Vite (три опубликованы в npm), строгий TypeScript, дизайн-системы под контролем линтеров и тестов, CI/CD. Довожу сайты до продакшена целиком — от токенов дизайна до выкладки.
 
 ## Ключевые компетенции
 
@@ -32,7 +32,7 @@ Frontend-архитектура
 : Токены дизайна (OKLCH, шкала размеров в rem) · библиотеки компонентов · доступность (a11y, WCAG) · адаптивная и кроссбраузерная вёрстка
 
 Developer experience и качество кода
-: ESLint (свои правила) · Biome · StyleLint · общие конфиги · инструменты на AST · плагины Babel / SWC / Webpack / RSpack · строгий TypeScript · удаление мёртвого кода
+: ESLint (свои правила) · Biome · StyleLint · общие конфиги · инструменты на AST · плагины Babel / SWC / Vite / Webpack / RSpack · строгий TypeScript · удаление мёртвого кода
 
 Тесты и поставка
 : Playwright (e2e, снимки вычисленных стилей) · Jest · MSW · контрактные тесты · GitHub Actions · release-please · Sentry
@@ -63,7 +63,7 @@ Developer experience и качество кода
 
 - Построил инфраструктуру линтинга: расширил ESLint с минимального конфига до 220+ правил и перевёл на поддерживаемые пресеты (`@eslint-react/eslint-plugin`, `@stylistic/eslint-plugin`, `eslint-plugin-import-x`, `typescript-eslint`); с нуля настроил StyleLint, Prettier и Husky.
 - Написал собственные правила ESLint (на уровне AST) для сортировки импортов и обработки асинхронных ошибок.
-- Создал и опубликовал open-source плагины, которые размечают HTML координатами исходного JSX для быстрой отладки: `babel-plugin-react-source-string` (Webpack / RSpack) и `swc-plugin-react-source` (Next.js / RSpack).
+- Создал и опубликовал версии плагинов разметки исходников React для Babel и SWC (см. Open source).
 - Добавил в CI проверки на основе своего плагина Babel, который нашёл и удалил 12 000+ строк мёртвого кода.
 - Руководил переводом TypeScript на рекомендованную строгую конфигурацию и заменил `any` конкретными типами во всём проекте.
 - Работал над новой дизайн-системой взамен устаревшей на MUI; настроил и поддерживал Sentry.
@@ -97,7 +97,15 @@ Developer experience и качество кода
 - **Поставка:** CI в GitHub Actions на каждый pull request, выкладка по тегу версии на VPS (pm2, nginx, Cloudflare), обновления через Dependabot и все необходимые оптимизации — сжатие SVG, конвертация JPEG в WebP / AVIF и прочее.
 - **Работа с AI-агентами:** агенты делают основную рутину по правилам проекта (AGENTS.md); линтеры, тесты и согласование новых токенов с владельцем держат результат единообразным.
 
+## Open source
+
+Плагины для React: атрибут `data-source="path:line"` у каждого JSX-элемента ведёт из DevTools к строке исходника.
+
+- **vite-plugin-react-source-string** — Vite 5+ (в т. ч. Rolldown), oxc-parser · [GitHub](https://github.com/tanchu/vite-plugin-react-source) · [npm](https://www.npmjs.com/package/vite-plugin-react-source-string)
+- **swc-plugin-react-source-string** — Next.js и Rspack, на Rust · [GitHub](https://github.com/tanchu/swc-plugin-react-source) · [npm](https://www.npmjs.com/package/swc-plugin-react-source-string)
+- **babel-plugin-react-source-string** — Babel / Webpack · [GitHub](https://github.com/tanchu/babel-plugin-react-source-string) · [npm](https://www.npmjs.com/package/babel-plugin-react-source-string)
+
 ## Образование и языки
 
-**Бакалавр, мировая экономика** — Московский государственный университет приборостроения и информатики (МГУПИ), 2004–2009\
+**Бакалавр, мировая экономика** — МГУПИ, Москва, 2004–2009\
 Английский — Upper-Intermediate (B2) · Русский — родной

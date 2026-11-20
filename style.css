@@ -12,7 +12,7 @@
 
 @page {
   size: A4;
-  margin: 13mm 14mm 12mm;
+  margin: 11mm 13mm 10mm;
   @bottom-right {
     content: counter(page) " / " counter(pages);
     font: 7.5pt Commissioner;
@@ -20,7 +20,7 @@
   }
 }
 
-html { font: 400 9pt/1.42 Commissioner, sans-serif; color: var(--text); background: var(--bg); }
+html { font: 400 9pt/1.38 Commissioner, sans-serif; color: var(--text); background: var(--bg); }
 body { margin: 0; }
 a { color: var(--accent); text-decoration: none; }
 strong { font-weight: 600; }
