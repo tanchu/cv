@@ -1,7 +1,7 @@
 # CV — Yaroslav Barov
 
-Website: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 <https://tanchu.github.io/cv/> (🇷🇺 [Russian version](https://tanchu.github.io/cv/ru/))\
-PDF: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 [English](https://github.com/tanchu/cv/blob/main/yaroslav_barov.pdf) · 🇷🇺 [Русский](https://github.com/tanchu/cv/blob/main/yaroslav_barov_ru.pdf)
+Website: 🇬🇧 <https://tanchu.github.io/cv/> (🇷🇺 [Russian version](https://tanchu.github.io/cv/ru/))\
+PDF: 🇬🇧 [English](https://github.com/tanchu/cv/blob/main/yaroslav_barov.pdf) · 🇷🇺 [Русский](https://github.com/tanchu/cv/blob/main/yaroslav_barov_ru.pdf)
 
 ## How it works
 
