@@ -1,13 +1,16 @@
-/* Шрифты — статичные начертания Commissioner и Oswald из набора modamakers.rs (SIL OFL, fonts/OFL-*.txt). */
-@font-face { font-family: Commissioner; src: url(fonts/Commissioner-400.ttf); font-weight: 400; }
-@font-face { font-family: Commissioner; src: url(fonts/Commissioner-600.ttf); font-weight: 600; }
-@font-face { font-family: Oswald; src: url(fonts/Oswald-600.ttf); font-weight: 600; }
+/* Одни стили для PDF (WeasyPrint, media print) и сайта (GitHub Pages, media screen).
+   Размеры — в em от корневого кегля: 9pt на листе, 16px на экране.
+   Шрифты — статичные начертания Commissioner и Oswald из набора modamakers.rs (SIL OFL, fonts/OFL-*.txt). */
+@font-face { font-family: Commissioner; src: url(fonts/Commissioner-400.ttf); font-weight: 400; font-display: swap; }
+@font-face { font-family: Commissioner; src: url(fonts/Commissioner-600.ttf); font-weight: 600; font-display: swap; }
+@font-face { font-family: Oswald; src: url(fonts/Oswald-600.ttf); font-weight: 600; font-display: swap; }
 
 :root {
   --text: oklch(25% 0.01 260);
   --muted: oklch(50% 0.01 260);
   --accent: oklch(48% 0.16 255);
   --rule: oklch(88% 0.005 260);
+  --bg: oklch(100% 0 0);
 }
 
 @page {
@@ -20,32 +23,32 @@
   }
 }
 
-html { font: 400 9pt/1.42 Commissioner, sans-serif; color: var(--text); }
+html { font: 400 9pt/1.42 Commissioner, sans-serif; color: var(--text); background: var(--bg); }
 body { margin: 0; }
 a { color: var(--accent); text-decoration: none; }
 strong { font-weight: 600; }
 em { font-style: normal; color: var(--muted); }
 code { font: inherit; }
-p { margin: 0 0 3pt; }
+p { margin: 0 0 0.33em; }
 
 /* Шапка */
-.cv-header { margin-bottom: 2mm; }
+.cv-header { margin-bottom: 0.6em; }
 h1 {
-  margin: 0 0 2pt;
-  font: 600 24pt/1.1 Oswald, sans-serif;
+  margin: 0 0 0.08em;
+  font: 600 2.67em/1.1 Oswald, sans-serif;
   color: var(--accent);
   letter-spacing: 0.01em;
 }
-.headline { font-weight: 600; font-size: 10.5pt; line-height: 1.35; margin-bottom: 4pt; }
-.contacts { color: var(--muted); font-size: 8.5pt; }
+.headline { font-weight: 600; font-size: 1.17em; line-height: 1.35; margin-bottom: 0.4em; }
+.contacts { color: var(--muted); font-size: 0.94em; }
 .contacts span { white-space: nowrap; }
 
 /* Разделы */
 h2 {
-  margin: 9pt 0 4pt;
-  padding-top: 5pt;
+  margin: 0.9em 0 0.4em;
+  padding-top: 0.5em;
   border-top: 0.75pt solid var(--rule);
-  font: 600 10pt/1.2 Oswald, sans-serif;
+  font: 600 1.11em/1.2 Oswald, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
@@ -55,20 +58,40 @@ h2 {
 /* Место работы: название слева, даты справа (атрибут `{dates="…"}` в markdown) */
 h3 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 7pt 0 1pt;
-  font: 600 10pt/1.3 Commissioner, sans-serif;
+  gap: 0 1em;
+  margin: 0.7em 0 0.1em;
+  font: 600 1.11em/1.3 Commissioner, sans-serif;
   color: var(--accent);
   break-after: avoid;
 }
-h3::after { content: attr(data-dates); color: var(--text); font-size: 8.5pt; }
+h3::after { content: attr(data-dates); color: var(--text); font-size: 0.85em; }
 h3 + p { break-after: avoid; }
 
-ul { margin: 2pt 0 0; padding-left: 10pt; }
-li { margin-bottom: 1.5pt; break-inside: avoid; }
+ul { margin: 0.22em 0 0; padding-left: 1.1em; }
+li { margin-bottom: 0.17em; break-inside: avoid; }
 li::marker { color: var(--accent); }
 
 /* Компетенции: определения в две колонки */
-dl { display: grid; grid-template-columns: 44mm 1fr; gap: 3pt 4mm; margin: 0; }
+dl { display: grid; grid-template-columns: 44mm 1fr; gap: 0.33em 4mm; margin: 0; }
 dt { font-weight: 600; }
 dd { margin: 0; }
+
+/* Сайт: язык и PDF; в PDF не выводятся */
+.site-nav { display: none; }
+
+@media screen {
+  html { font-size: 100%; line-height: 1.5; }
+  body { max-width: 52rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .site-nav { display: flex; justify-content: flex-end; gap: 1.25rem; font-size: 0.9rem; margin-bottom: 1rem; }
+  .site-nav a:hover, main a:hover { text-decoration: underline; }
+  dl { grid-template-columns: 14rem 1fr; gap: 0.5rem 1.5rem; }
+  li { margin-bottom: 0.3em; }
+
+  @media (width < 40rem) {
+    h1 { font-size: 2.2em; }
+    dl { grid-template-columns: 1fr; gap: 0; }
+    dd { margin-bottom: 0.6em; }
+  }
+}
