@@ -88,13 +88,13 @@ AI-Assisted Development
 
 ### Websites for small businesses in Serbia {dates="2026 – Present"}
 
-*Production sites built and run end to end — design system, content, SEO, hosting: [modamakers.space](https://modamakers.space) (sewing school, migrated from Tilda), [rare.rs](https://rare.rs), modamakers.rs and others.*
+*Production sites built and run end to end — design system, content, SEO, hosting: [modamakers.space](https://modamakers.space) (sewing school, migrated from Tilda) and others.*
 
 - **Stack:** Next.js App Router, React Server Components, TypeScript, Tailwind CSS 4, react-aria; multilingual (RU / EN / SR) with next-intl; migration from Tilda with redirects from every old URL to keep search rankings.
 - **Shared standards as packages:** open-source `@tanchu/*` configs for ESLint, StyleLint, TypeScript and browserslist plus written agent rules, versioned with release-please; every site starts from one Next.js starter template.
-- **Design tokens, enforced:** each project has its own small token set in one theme file — OKLCH colors, a rem-based type scale, fixed heading and button styles; linters reject any size or color outside the tokens.
+- **Design tokens, enforced:** each project has its own small token set in one theme file — OKLCH colors, a rem-based type scale, fixed component styles; linters reject any size or color outside the tokens.
 - **Testing:** Playwright end-to-end tests and a computed-style snapshot of every page at three widths, run in Docker — catches layout regressions without fragile screenshots.
-- **Delivery:** GitHub Actions CI on every pull request, deploy by version tag to a VPS (pm2, nginx, Cloudflare), Dependabot updates, SVG optimization in pre-commit.
+- **Delivery:** GitHub Actions CI on every pull request, deploy by version tag to a VPS (pm2, nginx, Cloudflare), Dependabot updates, and every asset optimization a site needs — SVG minification, JPEG to WebP / AVIF conversion and more.
 - **Working with AI agents:** coding agents do most of the routine work under project rules (AGENTS.md); linters, tests and owner approval for new tokens keep the output consistent.
 
 ## Education & Languages
