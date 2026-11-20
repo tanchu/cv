@@ -8,7 +8,7 @@
 :root {
   --text: oklch(25% 0.01 260);
   --muted: oklch(50% 0.01 260);
-  --accent: oklch(48% 0.16 255);
+  --accent: oklch(54.8% 0.1518 23.55); /* --c-accent из modamakers.rs */
   --rule: oklch(88% 0.005 260);
   --bg: oklch(100% 0 0);
 }
