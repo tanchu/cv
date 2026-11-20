@@ -1,33 +1,34 @@
 # CV — Yaroslav Barov
 
-Сайт: <https://tanchu.github.io/cv/> ([русская версия](https://tanchu.github.io/cv/ru/))
-PDF: [English](yaroslav_barov.pdf) · [Русский](yaroslav_barov_ru.pdf)
+Website: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 <https://tanchu.github.io/cv/> (🇷🇺 [Russian version](https://tanchu.github.io/cv/ru/))\
+PDF: 🏴󠁧󠁢󠁥󠁮󠁧󠁿 [English](https://github.com/tanchu/cv/blob/main/yaroslav_barov.pdf) · 🇷🇺 [Русский](https://github.com/tanchu/cv/blob/main/yaroslav_barov_ru.pdf)
 
-## Как устроено
+## How it works
 
-| Файл | Что это |
+| File | What it is |
 |---|---|
-| `cv.md`, `cv.ru.md` | текст резюме; шапка (имя, заголовок, контакты) — в YAML front matter |
-| `template.html` | HTML-шаблон pandoc, общий для PDF и сайта |
-| `style.css` | оформление: `@page` и размеры для PDF, `@media screen` для сайта |
-| `fonts/` | Commissioner и Oswald (статичные начертания из набора modamakers.rs, SIL OFL) |
+| `cv.md`, `cv.ru.md` | CV text; the header (name, headline, contacts) lives in YAML front matter |
+| `template.html` | pandoc HTML template, shared by the PDF and the website |
+| `style.css` | styles: `@page` and sizes for the PDF, `@media screen` for the website |
+| `fonts/` | Commissioner and Oswald (static instances from the modamakers.rs font set, SIL OFL) |
 | `build.sh` | PDF: pandoc (md → HTML) → WeasyPrint (HTML → PDF) |
-| `build-site.sh` | сайт в `_site/`: английская версия в `/`, русская в `/ru/`, рядом PDF |
+| `build-site.sh` | website in `_site/`: English at `/`, Russian at `/ru/`, PDFs alongside |
 
-Даты места работы задаются атрибутом заголовка: `### Claven AI {dates="Oct 2026 – Present"}`.
-В шрифтах Commissioner и Oswald нет стрелки «→» — не используйте её в тексте.
+Job dates are set with a heading attribute: `### Claven AI {dates="Oct 2026 – Present"}`.
+Commissioner and Oswald have no "→" arrow glyph, so don't use it in the text.
 
-## Сборка
+## Build
 
-Локально (нужны `pandoc` и `weasyprint`: `brew install pandoc weasyprint`):
+Locally (requires `pandoc` and `weasyprint`: `brew install pandoc weasyprint`):
 
 ```sh
 ./build.sh                                  # cv.md → yaroslav_barov.pdf
 ./build.sh cv.ru.md yaroslav_barov_ru.pdf
-./build-site.sh                             # сайт в _site/ (берёт уже собранные PDF)
-python3 -m http.server -d _site             # посмотреть сайт на http://localhost:8000
+./build-site.sh                             # website in _site/ (uses the PDFs built above)
+python3 -m http.server -d _site             # preview at http://localhost:8000
 ```
 
-В CI: push в `main` с изменением исходников запускает `.github/workflows/build-pdf.yml`. Он
-собирает оба PDF и коммитит их обратно, затем собирает сайт и выкладывает его на GitHub Pages.
-После своего push сделайте `git pull` — иначе следующий push упрётся в коммит бота с PDF.
+In CI: a push to `main` that changes the sources runs `.github/workflows/build-pdf.yml`. It
+builds both PDFs and commits them back, then builds the website and deploys it to GitHub Pages.
+Run `git pull` after your push, otherwise the next push will be rejected because of the bot's
+PDF commit.
