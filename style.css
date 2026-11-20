@@ -1,0 +1,74 @@
+/* Шрифты — статичные начертания Commissioner и Oswald из набора modamakers.rs (SIL OFL, fonts/OFL-*.txt). */
+@font-face { font-family: Commissioner; src: url(fonts/Commissioner-400.ttf); font-weight: 400; }
+@font-face { font-family: Commissioner; src: url(fonts/Commissioner-600.ttf); font-weight: 600; }
+@font-face { font-family: Oswald; src: url(fonts/Oswald-600.ttf); font-weight: 600; }
+
+:root {
+  --text: oklch(25% 0.01 260);
+  --muted: oklch(50% 0.01 260);
+  --accent: oklch(48% 0.16 255);
+  --rule: oklch(88% 0.005 260);
+}
+
+@page {
+  size: A4;
+  margin: 13mm 14mm 12mm;
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font: 7.5pt Commissioner;
+    color: var(--muted);
+  }
+}
+
+html { font: 400 9pt/1.42 Commissioner, sans-serif; color: var(--text); }
+body { margin: 0; }
+a { color: var(--accent); text-decoration: none; }
+strong { font-weight: 600; }
+em { font-style: normal; color: var(--muted); }
+code { font: inherit; }
+p { margin: 0 0 3pt; }
+
+/* Шапка */
+.cv-header { margin-bottom: 2mm; }
+h1 {
+  margin: 0 0 2pt;
+  font: 600 24pt/1.1 Oswald, sans-serif;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+.headline { font-weight: 600; font-size: 10.5pt; line-height: 1.35; margin-bottom: 4pt; }
+.contacts { color: var(--muted); font-size: 8.5pt; }
+.contacts span { white-space: nowrap; }
+
+/* Разделы */
+h2 {
+  margin: 9pt 0 4pt;
+  padding-top: 5pt;
+  border-top: 0.75pt solid var(--rule);
+  font: 600 10pt/1.2 Oswald, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  break-after: avoid;
+}
+
+/* Место работы: название слева, даты справа (атрибут `{dates="…"}` в markdown) */
+h3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 7pt 0 1pt;
+  font: 600 10pt/1.3 Commissioner, sans-serif;
+  color: var(--accent);
+  break-after: avoid;
+}
+h3::after { content: attr(data-dates); color: var(--text); font-size: 8.5pt; }
+h3 + p { break-after: avoid; }
+
+ul { margin: 2pt 0 0; padding-left: 10pt; }
+li { margin-bottom: 1.5pt; break-inside: avoid; }
+li::marker { color: var(--accent); }
+
+/* Компетенции: определения в две колонки */
+dl { display: grid; grid-template-columns: 44mm 1fr; gap: 3pt 4mm; margin: 0; }
+dt { font-weight: 600; }
+dd { margin: 0; }

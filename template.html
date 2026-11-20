@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="$lang$">
+<head>
+<meta charset="utf-8">
+<title>$name$ — CV</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="cv-header">
+  <div class="cv-header__text">
+    <h1>$name$</h1>
+    <p class="headline">$headline$</p>
+    <p class="contacts">$for(contacts)$<span>$contacts$</span>$sep$ · $endfor$</p>
+  </div>
+</header>
+<main>
+$body$
+</main>
+</body>
+</html>
