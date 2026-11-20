@@ -1,6 +1,4 @@
 #!/bin/sh
-# Сборка PDF из markdown: pandoc (md → HTML по template.html) → WeasyPrint (HTML + style.css → PDF).
-# Запуск: ./build.sh [cv.md] [yaroslav_barov.pdf]
 set -eu
 cd "$(dirname "$0")"
 

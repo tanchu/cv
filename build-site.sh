@@ -1,6 +1,4 @@
 #!/bin/sh
-# Сайт для GitHub Pages в _site/: английская версия в /, русская в /ru/, рядом PDF.
-# PDF собираются заранее (build.sh); здесь только копируются.
 set -eu
 cd "$(dirname "$0")"
 
@@ -8,7 +6,7 @@ OUT=_site
 rm -rf "$OUT"
 mkdir -p "$OUT/ru"
 
-page() { # page <source.md> <output.html> <root> <pdf> <alt_href> <alt_lang> <alt_label>
+page() {
   pandoc "$1" --from markdown --to html5 --standalone --template template.html \
     -M root="$3" -M pdf="$4" -M alt_href="$5" -M alt_lang="$6" -M alt_label="$7" -o "$2"
 }

@@ -1,6 +1,3 @@
-/* Одни стили для PDF (WeasyPrint, media print) и сайта (GitHub Pages, media screen).
-   Размеры — в em от корневого кегля: 9pt на листе, 16px на экране.
-   Шрифты — статичные начертания Commissioner и Oswald из набора modamakers.rs (SIL OFL, fonts/OFL-*.txt). */
 @font-face { font-family: Commissioner; src: url(fonts/Commissioner-400.ttf); font-weight: 400; font-display: swap; }
 @font-face { font-family: Commissioner; src: url(fonts/Commissioner-600.ttf); font-weight: 600; font-display: swap; }
 @font-face { font-family: Oswald; src: url(fonts/Oswald-600.ttf); font-weight: 600; font-display: swap; }
@@ -8,7 +5,7 @@
 :root {
   --text: oklch(25% 0.01 260);
   --muted: oklch(50% 0.01 260);
-  --accent: oklch(54.8% 0.1518 23.55); /* --c-accent из modamakers.rs */
+  --accent: oklch(54.8% 0.1518 23.55);
   --rule: oklch(88% 0.005 260);
   --bg: oklch(100% 0 0);
 }
@@ -31,7 +28,6 @@ em { font-style: normal; color: var(--muted); }
 code { font: inherit; }
 p { margin: 0 0 0.33em; }
 
-/* Шапка */
 .cv-header { margin-bottom: 0.6em; }
 h1 {
   margin: 0 0 0.08em;
@@ -43,7 +39,6 @@ h1 {
 .contacts { color: var(--muted); font-size: 0.94em; }
 .contacts span { white-space: nowrap; }
 
-/* Разделы */
 h2 {
   margin: 0.9em 0 0.4em;
   padding-top: 0.5em;
@@ -55,7 +50,6 @@ h2 {
   break-after: avoid;
 }
 
-/* Место работы: название слева, даты справа (атрибут `{dates="…"}` в markdown) */
 h3 {
   display: flex;
   flex-wrap: wrap;
@@ -73,12 +67,10 @@ ul { margin: 0.22em 0 0; padding-left: 1.1em; }
 li { margin-bottom: 0.17em; break-inside: avoid; }
 li::marker { color: var(--accent); }
 
-/* Компетенции: определения в две колонки */
 dl { display: grid; grid-template-columns: 44mm 1fr; gap: 0.33em 4mm; margin: 0; }
 dt { font-weight: 600; }
 dd { margin: 0; }
 
-/* Сайт: язык и PDF; в PDF не выводятся */
 .site-nav { display: none; }
 
 @media screen {

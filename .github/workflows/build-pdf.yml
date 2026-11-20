@@ -1,7 +1,5 @@
 name: Build CV
 
-# При изменении исходников на main: собирает PDF и коммитит их обратно,
-# затем собирает сайт (HTML + PDF) и выкладывает его на GitHub Pages.
 on:
   push:
     branches: [main]
@@ -21,7 +19,6 @@ permissions:
   pages: write
   id-token: write
 
-# Выкладку на Pages не прерываем на середине: новый запуск ждёт предыдущий.
 concurrency:
   group: build-cv-${{ github.ref }}
   cancel-in-progress: false
